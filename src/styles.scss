@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: $max-height + 20;
+  h1{
+    font-family: 'Salsa', cursive;
+  }
+}
+// .container {
+//   height: $max-height;
+//   width: $max-width;
+// }
+.container-fluid {
+  height: $max-height;
+  width: $max-width-fluid;
+}
+

@@ -1,0 +1,17 @@
+@import "../../../variables";
+.mat-toolbar.mat-accent {
+  // background: linear-gradient(to right, white 20%, #43c683, white, #dc281e) !important;
+  background-color: rgba(255, 255, 255, 0.05);
+  position: fixed;
+  color: gray;
+  height: 83px;
+
+  img {
+    content: url("../../../assets/img/png/aguila.png");
+  }
+  h1 {
+    color: white;
+    font-family: "Salsa", cursive;
+    font-size: 30px;
+  }
+}
