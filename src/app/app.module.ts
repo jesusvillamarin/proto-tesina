@@ -1,5 +1,4 @@
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MenuNavModule } from './components/menu-nav/menu-nav.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -9,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 const COMMON_MODULES = [
   BrowserModule,
   AppRoutingModule,
-  MenuNavModule,
   FlexLayoutModule
 ];
 

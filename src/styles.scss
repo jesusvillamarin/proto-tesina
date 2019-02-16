@@ -1,12 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'variables';
+@import "variables";
 body,
 html {
   margin: 0;
   padding: 0;
   height: $max-height + 20;
-  h1{
-    font-family: 'Salsa', cursive;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Salsa", cursive;
+  }
+  h1.sm{
+    font-family: 'Titillium Web', sans-serif;
   }
 }
 // .container {
@@ -17,4 +25,3 @@ html {
   height: $max-height;
   width: $max-width-fluid;
 }
-
