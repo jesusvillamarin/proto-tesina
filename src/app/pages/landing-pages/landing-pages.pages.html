@@ -1,24 +1,32 @@
 <brand-bar></brand-bar>
 <div
-  class="container background"
+  ngClass="container background"
+  ngClass.lt-sm="lt-sm"
   fxLayout="row"
   fxLayoutAlign="start center"
-  ngStyle.lt-sm="background-image:none"
 >
-  <div class="content"
-    fxFlex="50%" fxFlex.lt-sm="100%"
-    fxFlexOffset="50%" fxFlexOffset.lt-sm="0"
+  <div
+    class="content"
+    fxFlex="50%"
+    fxFlex.lt-sm="100%"
+    fxFlexOffset="50%"
+    fxFlexOffset.lt-sm="0"
     fxLayout="column"
     fxLayoutAlign="center center"
     fxLayoutGap="20px"
   >
-    <h1 style="text-align:center">Realiza el pago del impuesto predial mediante</h1>
+    <h1 style="text-align:center">
+      Realiza el pago del impuesto predial mediante
+    </h1>
     <img
       src="../../../assets/img/png/oxxo.svg"
       alt="Tienda de conveniencia oxxo"
-      style="max-width:200px; text-align: center;"
+      style="max-width:250px; text-align: center;"
     />
     <h2>Consulta tu predio</h2>
-    <button mat-raised-button > AQUI</button>
+    <button  routerLink="/landing/search" class="bounce" mat-fab>
+      AQUI <br />
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
   </div>
 </div>

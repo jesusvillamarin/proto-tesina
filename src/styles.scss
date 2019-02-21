@@ -13,8 +13,8 @@ html {
   h6 {
     font-family: "Salsa", cursive;
   }
-  h1.sm{
-    font-family: 'Titillium Web', sans-serif;
+  h1.sm {
+    font-family: "Titillium Web", sans-serif;
   }
 }
 // .container {
@@ -22,6 +22,19 @@ html {
 //   width: $max-width;
 // }
 .container-fluid {
-  height: $max-height;
-  width: $max-width-fluid;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  width: 90vw;
+  margin: 10vh auto auto auto;
+}
+
+.mat-fab .mat-button-wrapper {
+  line-height: 17px !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+  color:#34a06e !important;
 }

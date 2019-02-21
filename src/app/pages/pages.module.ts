@@ -11,12 +11,13 @@ const routes: Routes = [
   },
   {
     path: 'search',
-    loadChildren:''
+    loadChildren: './search-form/search-form.module#SearchFormModule'
   }
 ];
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, RouterModule.forChild(routes)]
+  imports: [CommonModule, RouterModule.forChild(routes)],
+  exports: []
 })
 export class PagesModule {}
