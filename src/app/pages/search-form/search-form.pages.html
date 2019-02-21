@@ -5,8 +5,8 @@
   [colorHeader]="'#73737394'"
 ></brand-bar>
 <mat-tab-group
-  (swipeleft)="toLeft()"
-  (swiperight)="toRight()"
+  (swipeleft)="toRight()"
+  (swiperight)="toLeft()"
   animationDuration="600ms"
   mat-align-tabs="center"
   [selectedIndex]="indexTab"
@@ -17,7 +17,7 @@
       <h2>Clave catastral</h2>
     </ng-template>
     <ng-template matTabContent >
-      <catastral-key-form (swipeleft)="toLeft()"></catastral-key-form>
+      <catastral-key-form (swipeleft)="toRight()"></catastral-key-form>
     </ng-template>
   </mat-tab>
   <mat-tab>
@@ -26,7 +26,7 @@
       <h2>Cuenta catastral</h2>
     </ng-template>
     <ng-template matTabContent >
-      <div (swiperight)="toRight()">
+      <div (swiperight)="toLeft()">
         The Second Content
       </div>
     </ng-template>

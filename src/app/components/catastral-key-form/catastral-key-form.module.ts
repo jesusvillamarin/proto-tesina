@@ -7,6 +7,7 @@ import { CatastralKeyFormComponent }  from './catastral-key-form.component'
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
 
 
 const COMMON_MODULE = [
@@ -14,7 +15,8 @@ const COMMON_MODULE = [
   FlexLayoutModule,
   MatFormFieldModule,
   MatIconModule,
-  MatInputModule
+  MatInputModule,
+  MatButtonModule
 ]
 
 @NgModule({
