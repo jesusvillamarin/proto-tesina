@@ -1,10 +1,45 @@
-
-.container.background{
+.container.background {
   width: 100vw;
   height: 100vh;
-  background-image: url('../../../assets/img/fondo.png');
+  background-image: url("../../../assets/img/fondo.png");
   background-repeat: no-repeat;
   background-position: right center;
   background-size: 100% 100%;
   background-attachment: fixed;
+}
+
+.lt-sm {
+  background: #7cc35b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #7cc35b,
+    #a8e063
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #7cc35b,
+    #a8e063
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fffbfb;
+  height: 100vh;
+
+  .bounce {
+    background: whitesmoke;
+    color: #3d3d3d;
+  }
+}
+
+.bounce {
+  background: linear-gradient(135deg, #7eda7a 0%, #b7dfa5 100%);
+  animation: bounce 0.5s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(10px);
+  }
 }

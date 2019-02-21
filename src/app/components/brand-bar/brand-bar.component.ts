@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'brand-bar',
@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BrandBarComponent implements OnInit {
 
-  constructor() { }
+  @Input() color: string = "white";
+  @Input() position: string = "fixed";
+  @Input() align: string = "start center";
+  @Input() colorHeader: string = "white";
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

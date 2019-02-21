@@ -1,8 +1,9 @@
 <mat-toolbar
-  [ngStyle.lt-sm]="{ 'background-color': 'white' }"
+  ngStyle.lt-sm="background-color: {{color}};"
   fxLayout="row"
-  fxLayoutAlign="start center"
+  fxLayoutAlign="{{align}}"
   fxLayoutAlign.lt-sm="center center"
+  [ngStyle] = "{'position': position}"
 >
-  <h1 ngStyle.lt-sm="color:#73737394">H.Ayuntamiento</h1>
+  <h1  [ngStyle]="{'color': colorHeader}" ngStyle.lt-sm="color:#73737394">H.Ayuntamiento</h1>
 </mat-toolbar>

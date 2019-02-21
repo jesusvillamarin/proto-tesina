@@ -13,8 +13,8 @@ html {
   h6 {
     font-family: "Salsa", cursive;
   }
-  h1.sm{
-    font-family: 'Titillium Web', sans-serif;
+  h1.sm {
+    font-family: "Titillium Web", sans-serif;
   }
 }
 // .container {
@@ -24,4 +24,8 @@ html {
 .container-fluid {
   height: $max-height;
   width: $max-width-fluid;
+}
+
+.mat-fab .mat-button-wrapper {
+  line-height: 17px !important;
 }
