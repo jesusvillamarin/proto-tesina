@@ -4,6 +4,7 @@
   fxLayoutAlign="center center"
   fxLayoutGap="10px"
   [formGroup]="form"
+  (swipeleft)="toNext()"
 >
   <mat-form-field appearance="outline" fxFlex="30%" fxFlex.lt-sm="45%">
     <mat-label>Tipo</mat-label>

@@ -5,8 +5,8 @@
   [colorHeader]="'#73737394'"
 ></brand-bar>
 <mat-tab-group
-  (swipeleft)="toRight()"
-  (swiperight)="toLeft()"
+  (swipeleft)="indexTab = 1"
+  (swiperight)="indexTab = 0"
   animationDuration="600ms"
   mat-align-tabs="center"
   [selectedIndex]="indexTab"
@@ -18,7 +18,7 @@
     </ng-template>
     <ng-template matTabContent>
       <catastral-key-form
-        (swipeleft)="toRight()"
+        (nextForm)="swipeEvent($event)"
         (searchCastastralKey)="onSearchKey($event)"
       ></catastral-key-form>
     </ng-template>
@@ -30,7 +30,7 @@
     </ng-template>
     <ng-template matTabContent>
       <catastral-account-form
-        (swiperight)="toLeft()"
+        (previousForm)="swipeEvent($event)"
         (searchCastastralAccount)="onSearchAccount($event)"
       ></catastral-account-form>
     </ng-template>
