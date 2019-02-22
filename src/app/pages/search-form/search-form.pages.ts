@@ -1,24 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'search-form',
+  selector: "search-form",
   templateUrl: './search-form.pages.html',
   styleUrls: ['./search-form.pages.scss']
 })
 export class SearchFormPages implements OnInit {
-
   indexTab = 0;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  toRight(){
+  toRight() {
     this.indexTab = 1;
   }
-  toLeft(){
+  toLeft() {
     this.indexTab = 0;
   }
-
+  onSearchKey(event) {
+    console.log(event);
+  }
+  onSearchAccount(event) {
+    console.log(event);
+  }
 }

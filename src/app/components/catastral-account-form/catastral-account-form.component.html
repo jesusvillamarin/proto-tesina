@@ -1,3 +1,42 @@
-<p>
-  catastral-account works!
-</p>
+<form
+  style="margin:25vh auto auto auto"
+  class="container"
+  fxLayout="row wrap"
+  fxLayoutAlign="center center"
+  fxLayoutGap="10px"
+  [formGroup]="form"
+>
+  <mat-form-field appearance="outline" fxFlex="25%" fxFlex.lt-sm="100%">
+    <mat-label>Tipo de predio</mat-label>
+    <mat-select placeholder="Ejemplo" formControlName="type" required>
+      <mat-option>---</mat-option>
+      <mat-option value="Urbano">Urbano</mat-option>
+      <mat-option value="Suburbano">Suburbano</mat-option>
+      <mat-option value="Rustico">Rustico</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" fxFlex="30%" fxFlex.lt-sm="100%">
+    <mat-label>Digitos de la cuenta</mat-label>
+    <input
+      formControlName="account"
+      matInput
+      placeholder="0000000"
+      minlength="7"
+      maxlength="7"
+    />
+    <mat-icon class="done" matSuffix [fxHide]="form.get('account').invalid"
+      >done</mat-icon
+    >
+  </mat-form-field>
+</form>
+
+<div fxLayout="row" fxLayoutAlign="center center">
+  <button
+    [disabled]="form.valid ? false : true"
+    mat-raised-button
+    (click)="search()"
+  >
+    Buscar <mat-icon>arrow_forward_ios</mat-icon>
+  </button>
+</div>
