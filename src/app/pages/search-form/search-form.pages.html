@@ -16,8 +16,11 @@
       <mat-icon>search</mat-icon>
       <h2>Clave catastral</h2>
     </ng-template>
-    <ng-template matTabContent >
-      <catastral-key-form (swipeleft)="toRight()"></catastral-key-form>
+    <ng-template matTabContent>
+      <catastral-key-form
+        (swipeleft)="toRight()"
+        (searchCastastralKey)="onSearchKey($event)"
+      ></catastral-key-form>
     </ng-template>
   </mat-tab>
   <mat-tab>
@@ -25,8 +28,11 @@
       <mat-icon>search</mat-icon>
       <h2>Cuenta catastral</h2>
     </ng-template>
-    <ng-template matTabContent >
-        <catastral-account-form (swiperight)="toLeft()"></catastral-account-form>
+    <ng-template matTabContent>
+      <catastral-account-form
+        (swiperight)="toLeft()"
+        (searchCastastralAccount)="onSearchAccount($event)"
+      ></catastral-account-form>
     </ng-template>
   </mat-tab>
 </mat-tab-group>

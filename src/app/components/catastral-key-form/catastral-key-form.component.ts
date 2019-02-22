@@ -1,6 +1,5 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { EventEmitter } from 'events';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'catastral-key-form',
@@ -27,11 +26,11 @@ export class CatastralKeyFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  searchPerKey(event){
+  search(){
 
     if(this.form.invalid) return;
 
-    this.searchCastastralKey.emit(event);
+    this.searchCastastralKey.emit(this.form.value);
   }
 
 }
