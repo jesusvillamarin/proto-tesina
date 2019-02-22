@@ -5,6 +5,7 @@
   fxLayoutAlign="center center"
   fxLayoutGap="10px"
   [formGroup]="form"
+  (swiperight)="toPrevious()"
 >
   <mat-form-field appearance="outline" fxFlex="25%" fxFlex.lt-sm="100%">
     <mat-label>Tipo de predio</mat-label>

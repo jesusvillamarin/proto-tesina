@@ -9,6 +9,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class CatastralKeyFormComponent implements OnInit {
 
   @Output() searchCastastralKey = new EventEmitter();
+  @Output() nextForm = new EventEmitter();
   form: FormGroup;
 
   constructor(formBuilder: FormBuilder) {
@@ -24,6 +25,10 @@ export class CatastralKeyFormComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  toNext(){
+    this.nextForm.emit(1)
   }
 
   search(){

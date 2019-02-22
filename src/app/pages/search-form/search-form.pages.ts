@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: "search-form",
+  selector: 'search-form',
   templateUrl: './search-form.pages.html',
   styleUrls: ['./search-form.pages.scss']
 })
@@ -12,11 +12,8 @@ export class SearchFormPages implements OnInit {
 
   ngOnInit() {}
 
-  toRight() {
-    this.indexTab = 1;
-  }
-  toLeft() {
-    this.indexTab = 0;
+  swipeEvent(event) {
+    this.indexTab = event;
   }
   onSearchKey(event) {
     console.log(event);

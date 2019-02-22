@@ -7,18 +7,15 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import * as Hammer from 'hammerjs';
+import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
-
-import {
-  HammerGestureConfig,
-  HAMMER_GESTURE_CONFIG
-} from '@angular/platform-browser';
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
     // override hammerjs default configuration
-    swipe: { direction: Hammer.DIRECTION_ALL }
-  };
+    'swipe': { direction: Hammer.DIRECTION_ALL }
+  }
 }
+
 
 const COMMON_MODULES = [
   BrowserModule,

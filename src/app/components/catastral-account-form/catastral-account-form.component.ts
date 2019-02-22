@@ -9,6 +9,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class CatastralAccountFormComponent implements OnInit {
 
   @Output() searchCastastralAccount = new EventEmitter();
+  @Output() previousForm = new EventEmitter();
 
   form : FormGroup;
 
@@ -29,6 +30,10 @@ export class CatastralAccountFormComponent implements OnInit {
     if(this.form.invalid) return;
 
     this.searchCastastralAccount.emit(this.form.value);
+  }
+
+  toPrevious(){
+    this.previousForm.emit(0);
   }
 
 }
