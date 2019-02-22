@@ -36,5 +36,9 @@ html {
 }
 
 .mat-form-field-appearance-outline .mat-form-field-outline-thick {
-  color:#34a06e !important;
+  color: #34a06e !important;
+}
+
+.mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick{
+  color: #e6191999 !important;
 }

@@ -1,3 +1,17 @@
-<p>
-  catastral-account works!
-</p>
+<form
+  class="container"
+  fxLayout="row"
+  fxLayoutAlign="center center"
+  fxLayoutGap="10px"
+  [formGroup]="form"
+>
+  <mat-form-field>
+    <mat-select placeholder="Tipo de predioo" formControlName="selectControl" required>
+      <mat-option>---</mat-option>
+      <mat-option value="Urbano">Urbano</mat-option>
+      <mat-option value="Suburbano">Suburbano</mat-option>
+      <mat-option value="Rustico">Rustico</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <!-- <mat-form-field></mat-form-field> -->
+</form>

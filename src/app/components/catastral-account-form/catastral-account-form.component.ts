@@ -1,3 +1,4 @@
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatastralAccountFormComponent implements OnInit {
 
-  constructor() { }
+  form : FormGroup;
+
+  constructor(formBuilder: FormBuilder) {
+    this.form = formBuilder.group({
+      selectControl: ['', [Validators.required]]
+    })
+   }
 
   ngOnInit() {
   }
