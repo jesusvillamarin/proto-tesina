@@ -32,7 +32,7 @@ export class CatastralAccountFormComponent implements OnInit {
     this.searchCastastralAccount.emit(this.form.value);
   }
 
-  onPrevious(){
+  toPrevious(){
     this.previousForm.emit(0);
   }
 
