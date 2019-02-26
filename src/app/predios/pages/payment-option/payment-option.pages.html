@@ -1,0 +1,33 @@
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+  <mat-radio-group class="example-radio-group" fxFlex="30%" fxFlex.lt-sm="100%">
+    <mat-radio-button class="example-radio-button" [value]="MASTER_CARD">
+      <img
+        src="https://cdn.iconscout.com/icon/free/png-256/mastercard-25-675722.png"
+        alt="MasterCard Option"
+        style="width:80px"
+      />
+    </mat-radio-button>
+    <mat-radio-button class="example-radio-button" [value]="VISA">
+      <img
+        src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Visa-icon.png"
+        alt="VISA Option"
+        style="width:80px"
+      />
+    </mat-radio-button>
+    <mat-radio-button class="example-radio-button" [value]="AMEX">
+      <img
+        src="https://cdn0.iconfinder.com/data/icons/flat-design-business-set-3/24/payment-method-amex-512.png"
+        alt="AMEX Option"
+        style="width:80px"
+      />
+    </mat-radio-button>
+    <mat-radio-button class="example-radio-button" [value]="OXXO">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/66/Oxxo_Logo.svg"
+        alt="OXXO Option"
+        style="width:80px"
+      />
+    </mat-radio-button>
+  </mat-radio-group>
+  <order-conekta fxFlex="65%"></order-conekta>
+</div>

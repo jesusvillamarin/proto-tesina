@@ -16,12 +16,22 @@ export class MyHammerConfig extends HammerGestureConfig {
   }
 }
 
+// NGRX STORE
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { reducers, metaReducers } from './shared/store/reducers';
+
+
 
 const COMMON_MODULES = [
   BrowserModule,
   AppRoutingModule,
   FlexLayoutModule,
-  BrowserAnimationsModule
+  BrowserAnimationsModule,
+  StoreModule.forRoot( reducers, {metaReducers}),
+  StoreDevtoolsModule.instrument({
+    maxAge: 25,
+  })
 ];
 
 @NgModule({

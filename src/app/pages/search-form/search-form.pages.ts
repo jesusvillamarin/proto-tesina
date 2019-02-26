@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'search-form',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class SearchFormPages implements OnInit {
   indexTab = 0;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 
@@ -17,8 +18,10 @@ export class SearchFormPages implements OnInit {
   }
   onSearchKey(event) {
     console.log(event);
+    this.router.navigate(['/taxes']);
   }
   onSearchAccount(event) {
     console.log(event);
+    this.router.navigate(['/taxes']);
   }
 }

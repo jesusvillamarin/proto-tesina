@@ -1,0 +1,34 @@
+<form fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="10px" [formGroup]="form" fxFlex="60%"
+  fxFlex.lt-sm="100%">
+  <h3 style="margin-left: 30px" fxFlex="100%">Total a pagar: $1,325.00</h3>
+  <mat-form-field appearance="outline" fxFlex="90%" fxFlex.lt-sm="100%">
+    <mat-label>Nombre del Titular</mat-label>
+    <input formControlName="name" matInput placeholder="Juan Peréz" required />
+    <!-- <mat-icon class="done" matSuffix [fxHide]="form.get('tipo').invalid">done</mat-icon> -->
+  </mat-form-field>
+  <mat-form-field appearance="outline" fxFlex="60%" fxFlex.lt-sm="45%">
+    <mat-label>Número de Tarjeta</mat-label>
+    <input formControlName="card" matInput required />
+    <!-- <mat-icon class="done" matSuffix [fxHide]="form.get('tipo').invalid">done</mat-icon> -->
+  </mat-form-field>
+  <mat-form-field appearance="outline" fxFlex="30%" fxFlex.lt-sm="45%">
+    <mat-label>Código de Seguridad</mat-label>
+    <input formControlName="code" matInput required />
+    <!-- <mat-icon class="done" matSuffix [fxHide]="form.get('tipo').invalid">done</mat-icon> -->
+  </mat-form-field>
+  <h3 fxFlex="100%">Fecha de Expiración</h3>
+  <mat-form-field appearance="outline" fxFlex="40%" fxFlex.lt-sm="30%">
+    <mat-label>Mes</mat-label>
+    <input formControlName="month" matInput required />
+    <!-- <mat-icon class="done" matSuffix [fxHide]="form.get('tipo').invalid">done</mat-icon> -->
+  </mat-form-field>
+  <mat-form-field appearance="outline" fxFlex="40%" fxFlex.lt-sm="30%">
+    <mat-label>Año</mat-label>
+    <input formControlName="year" matInput required />
+    <!-- <mat-icon class="done" matSuffix [fxHide]="form.get('tipo').invalid">done</mat-icon> -->
+  </mat-form-field>
+  <div fxFlexOffset="20%"></div>
+  <button [disabled]="form.valid ? false : true" mat-raised-button (click)="search()" fxFlex="40%">
+    Pagar
+  </button>
+</form>

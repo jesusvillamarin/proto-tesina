@@ -1,17 +1,20 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { Routes, RouterModule } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: "",
-    pathMatch: "full",
-    redirectTo: "landing"
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'landing'
   },
   {
-    path: "landing",
-    loadChildren:
-      "./pages/pages.module#PagesModule"
+    path: 'landing',
+    loadChildren: './pages/pages.module#PagesModule'
+  },
+  {
+    path: 'taxes',
+    loadChildren: './core/core.routing#CoreRoutingModule'
   }
 ];
 
